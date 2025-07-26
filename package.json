@@ -1,19 +1,23 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-engagebay",
   "version": "0.1.0",
   "description": "",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n",
+    "n8n-community-node-package",
+    "engagebay",
+    "crm",
+    "marketing"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/mongus/n8n-nodes-engagebay",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Aaron Porter",
+    "email": "aaron@mongus.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/mongus/n8n-nodes-engagebay.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -33,12 +37,13 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/EngageBayCredentialsApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/Engagebay/EngagebayContacts.node.js",
+      "dist/nodes/Engagebay/EngagebayOwners.node.js",
+      "dist/nodes/Engagebay/EngagebayTracks.node.js",
+      "dist/nodes/Engagebay/EngagebayUserProfile.node.js"
     ]
   },
   "devDependencies": {
