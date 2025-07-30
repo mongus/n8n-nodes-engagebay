@@ -1,7 +1,7 @@
 {
   "name": "n8n-nodes-engagebay",
   "version": "0.1.1",
-  "description": "",
+  "description": "n8n Community Node Package for EngageBay CRM and Marketing Automation",
   "keywords": [
     "n8n",
     "n8n-community-node-package",
