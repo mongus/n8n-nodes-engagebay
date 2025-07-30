@@ -25,7 +25,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx rimraf dist && tsc && gulp build:icons",
-    "dev": "tsc --watch",
+    "dev": "nodemon --watch nodes --ext js,ts,json --exec \"dotenv -- npm run build && n8n start\"",
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
@@ -40,17 +40,17 @@
       "dist/credentials/EngageBayCredentialsApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/Engagebay/EngagebayContacts.node.js",
-      "dist/nodes/Engagebay/EngagebayOwners.node.js",
-      "dist/nodes/Engagebay/EngagebayTracks.node.js",
-      "dist/nodes/Engagebay/EngagebayUserProfile.node.js"
+      "dist/nodes/Engagebay/Engagebay.node.js"
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.1.0",
     "@typescript-eslint/parser": "~8.32.0",
+    "dotenv-cli": "^10.0.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^5.0.0",
+    "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },
